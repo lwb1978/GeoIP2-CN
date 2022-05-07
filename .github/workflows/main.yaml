@@ -56,7 +56,7 @@ jobs:
 
       - name: 刷新 CDN 缓存
         #run: curl ${{ secrets.CDN_URL }}
-        run: curl https://purge.jsdelivr.net/gh/lwb1978/GeoIP2-CN@release/CN_IP_list.txt
+        run: curl purge.jsdelivr.net/gh/lwb1978/GeoIP2-CN@release/CN_IP_list.txt
   
       - name: 删除旧的 workflow 运行记录
         uses: GitRML/delete-workflow-runs@main
