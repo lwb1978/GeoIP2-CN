@@ -1,4 +1,4 @@
-name: Update GeoIP2-CN
+name: Update China IP list
 
 on:
   workflow_dispatch:
@@ -55,8 +55,8 @@ jobs:
           force: true
 
       - name: 刷新 CDN 缓存
-        run: curl ${{ secrets.CDN_URL }}
-        #run: curl purge.jsdelivr.net/gh/lwb1978/GeoIP2-CN@release/
+        #run: curl ${{ secrets.CDN_URL }}
+        run: curl purge.jsdelivr.net/gh/lwb1978/GeoIP2-CN@release/
   
       - name: 删除旧的 workflow 运行记录
         uses: GitRML/delete-workflow-runs@main
