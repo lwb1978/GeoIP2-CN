@@ -1,1 +1,63 @@
-111
+name: Update GeoIP2-CN
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 4 */3 * *'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    name: Update GeoIP2 database
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: openssl
+
+      # Runs a single command using the runners shell
+      - name: Update GeoIP2 database
+        run: php ./main.php
+
+      - name: Push artifacts to release branch
+        run: |
+          git config --local user.email "86697442+lwb1978@users.noreply.github.com"
+          git config --local user.name "github-action[bot]"
+          
+          git fetch
+          git checkout release
+          
+          git checkout --orphan release-orphan
+          git rm -rf .
+          
+          cp -rf /tmp/China_IP_list.txt ./
+          git add ./China_IP_list.txt
+          
+          git commit -am "Updated at $(date)"
+          
+          git branch -D release
+          git branch -m release
+
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: release
+          force: true
+
+      - name: Purge CDN Cache
+        run: curl ${{ secrets.CDN_URL }}
+  
+      - name: 删除旧的 workflow 运行记录
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 30
