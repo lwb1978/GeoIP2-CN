@@ -2,14 +2,14 @@
 
 ## 介绍
 
-本项目数据源完全依赖于 https://github.com/Hackl0us/GeoIP2-CN 项目，只是对TXT文件进行了简单清洗，移除了多余的空格和换行，方便另外一些项目调用。
+本项目数据源完全依赖于 https://github.com/Hackl0us/GeoIP2-CN 项目，只是对TXT文件进行了简单清洗，移除了多余的空格和换行，方便一些项目的正确调用。
 
-**定时更新：** 数据会每天凌晨四点对 Hackl0us 数据库进行采集（Hackl0us/GeoIP2-CN 项目每三天凌晨两点更新）
+**定时更新：** 数据会每天在国际标准时间凌晨4点（北京时间+8，即中午12点）对 Hackl0us 数据库进行采集（Hackl0us/GeoIP2-CN 项目在每3天的国标时间凌晨2点更新）
 
 ## 📥 下载链接
 
 🐙 GitHub RAW：https://github.com/lwb1978/GeoIP2-CN/raw/release/CN_IP_list.txt  
 🚀 CDN 加速：https://cdn.jsdelivr.net/gh/lwb1978/GeoIP2-CN@release/CN_IP_list.txt
 
-对于网络状况良好、无污染的环境下，建议选择 GitHub RAW 的方式下载，因为可以第一获取到最新的资源，因为服务器在境外，可能下载响应时间和速度稍长，但因为文件小，所以通常问题不大。  
-对于网络状况不好，存在污染的环境下，建议选择 CDN 加速的方式下载，速度非常快。但是可能存在缓存未更新的情况，很可能下载到旧的资源。
+对于有梯子的环境下，建议选择 GitHub RAW 的方式下载，可以第一时间获取到最新的资源。  
+对于无梯子的环境下，建议选择 CDN 加速的方式下载，但是可能存在CDN缓存未及时更新下载到旧的资源。
