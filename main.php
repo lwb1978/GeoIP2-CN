@@ -1,7 +1,7 @@
 <?php
 $data = [];
-$file = sys_get_temp_dir() . '/China_IP_list.txt';
-$src  = 'https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/CN-ip-cidr.txt';
+$file = sys_get_temp_dir() . '/CN_IP_list.txt';
+$src  = 'https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt';
 $arr  = explode("\n", file_get_contents($src));
 foreach ($arr as $tmp) {
     $line = trim($tmp);
