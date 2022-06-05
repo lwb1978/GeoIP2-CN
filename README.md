@@ -9,7 +9,9 @@
 ## 📥 下载链接
 
 🐙 GitHub RAW：https://github.com/lwb1978/GeoIP2-CN/raw/release/CN_IP_list.txt
+
 🐙 镜像站下载：https://raw.fastgit.org/lwb1978/GeoIP2-CN/release/CN_IP_list.txt
+
 🚀 CDN 加速：https://cdn.jsdelivr.net/gh/lwb1978/GeoIP2-CN@release/CN_IP_list.txt
 
 对于有梯子的环境下，建议选择 GitHub RAW 的方式下载，可以第一时间获取到最新的资源。  
