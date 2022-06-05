@@ -8,11 +8,12 @@
 
 ## 📥 下载链接
 
-🐙 GitHub RAW：https://github.com/lwb1978/GeoIP2-CN/raw/release/CN_IP_list.txt  
+🐙 GitHub RAW：https://github.com/lwb1978/GeoIP2-CN/raw/release/CN_IP_list.txt
+🐙 镜像站下载：https://raw.fastgit.org/lwb1978/GeoIP2-CN/release/CN_IP_list.txt
 🚀 CDN 加速：https://cdn.jsdelivr.net/gh/lwb1978/GeoIP2-CN@release/CN_IP_list.txt
 
 对于有梯子的环境下，建议选择 GitHub RAW 的方式下载，可以第一时间获取到最新的资源。  
-对于无梯子的环境下，建议选择 CDN 加速的方式下载，但是可能存在CDN缓存未及时更新下载到旧的资源。
+对于无梯子的环境下，建议选择 镜像站下载，CDN 加速的方式已经被墙。
 
 ## 鸣谢
 感谢 Hackl0us 无偿提供IP数据库，感谢 v03413 的自动清洗代码。
